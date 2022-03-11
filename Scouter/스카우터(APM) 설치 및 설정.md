@@ -41,6 +41,7 @@ Java Agent Jar 경로 지정, 설정파일 경로 지정, 모니터링 대상(Ob
 
 ### scouter.conf 설정
 
+```txt
 ### scouter java agent configruation sample
 obj_name=tomcat
 net_collector_ip=127.0.01 -> 실제 운영중인 스카우터 서버 IP
@@ -115,6 +116,7 @@ xlog_discard_service_patterns=
 xlog_discard_service_show_error=true
 #Activating collect sub counters using JMX
 jmx_counter_enabled=true
+```
 
 ### 모니터링
 
