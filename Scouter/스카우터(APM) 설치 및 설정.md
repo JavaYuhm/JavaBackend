@@ -125,7 +125,9 @@ jmx_counter_enabled=true
 
 
 Xlog_java 추가
+
 ![image](https://user-images.githubusercontent.com/99159721/157775675-28dba79e-1e1d-4d01-b922-fb9118eb9033.png)
+
 
 ※ XLog의 주요 메타 정보
 service : service명
