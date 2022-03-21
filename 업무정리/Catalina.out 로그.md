@@ -1,6 +1,7 @@
 ### Catalina.out 로그
 
 catalina.out에 중요 로그파일이 모두 적재(System.out.print, err 도 저장됨)
+서버 용량이 부족해짐, 주기적으로 서버에서 catalina.out 로그를 지우는 작업을 해야됨.
 
 ### 로그 초기화
 
