@@ -24,10 +24,12 @@ True로 하게 되면 WaitTimeoutException 이 시간이 초과될 경우 발생
 
 ![image](https://user-images.githubusercontent.com/99159721/162133445-eaac1e95-e1b2-491f-8079-264f109c209f.png)
 
-해당 설정을 통해 서버 자체에서 Connection 을 close 해준다고 하지만,,
-운영 중인 서버에선 which was not closed after being used. 로 실제로 .. DB 상에서도 세션을 유지하고 있음.
+해당 설정을 통해 WAS 자체에서 Connection 을 close 해준다고 하지만,,
+운영 중인 서버에선  Rolling back the local transaction for the connection which was not closed after being used 로 
+실제로  DB 상에서는 세션을 유지하고 있음.
 
-서버가 Down, 장애가 안나기 위해서 수동으로 destroy를 통해 connection들을 지웠다,, 
+DB session 계속 차, 수동으로 destroy를 통해 connection들을 지웠다,, 
 
-**결국 근본적으로 DB와 연결 후 close() 되지 않은 Application을 찾아 수정하는 것이 가장 깔끔함**
+**결국 근본적으로 DB와 연결 후 close() 되지 않은 Application을 찾아 수정하는 것이 가장 깔끔함, 
+하지만 해당 운영 중인 소스 외주개발을 통해 구축되어 있고, Java Logic Source는 classes 로 컴파일되어 있어 소스를 Decompile해서 찾아내기로 함.**
 
