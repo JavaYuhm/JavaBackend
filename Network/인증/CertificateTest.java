@@ -63,7 +63,8 @@ import org.bouncycastle.x509.X509V3CertificateGenerator;
 import org.bouncycastle.x509.extension.AuthorityKeyIdentifierStructure;
 // import org.bouncycastle.x509.extension.SubjectKeyIdentifierStructure;
 
-
+// 자바 인증서 예제
+// ref : http://cris.joongbu.ac.kr/course/2017-1/jcp/example/certificate/CertificateTest.java
 @SuppressWarnings("deprecation")
 public class CertificateTest {
     // Leaf certificate (end-entity certificate)
